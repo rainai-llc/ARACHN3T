@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainai Inc. - Strategic Growth Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        a {
+            color: red;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #ef5675; /* Pink from the brilliantBlues palette */
+            text-decoration: underline; /* Add underline on hover */
+            transform: translateY(-2px); /* Subtle lift effect */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            line-height: 1;
+            color: #ffa600;
+        }
+        .flow-step {
+            border-color: #7a5195;
+            background-color: #003f5c1a;
+        }
+        .kpi-card {
+            background-color: #003f5c;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-12">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-[#003f5c]">Rainai Inc.</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Visualizing the evolution of business operations through Agentic AI, where AI integrates as employees, not just tools.</p>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-[#003f5c]">Links:</h3>
+            <ul>
+                <li><a href="/demo">Demo</a></li>
+                <li><a href="/database">ARACHN3T Database</a><li>
+                <li><a href="/mya">Project-MYA</a></li>
+            </ul>
+        </header>
+
+        <section id="strategy-overview" class="my-16 p-8 bg-white rounded-2xl shadow-lg">
+            <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-6">Our Two-Phase Strategic Expansion</h2>
+            <p class="text-center text-gray-600 max-w-4xl mx-auto mb-10">Our growth is structured in two distinct, sequential phases. We begin by proving our immense value in high-stakes revival scenarios, then leverage that success to penetrate the broader enterprise market, transforming suboptimal AI implementations into powerful competitive advantages.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
+                <div class="p-6 text-center border-4 border-dashed border-[#ffa600] rounded-xl">
+                    <h3 class="text-2xl font-bold text-[#003f5c]">Phase 1</h3>
+                    <p class="font-semibold text-gray-700">Revival &amp; Proof of Concept</p>
+                </div>
+                <div class="flow-arrow transform -rotate-90 md:rotate-0 mx-4">➔</div>
+                <div class="p-6 text-center border-2 border-solid border-[#7a5195] rounded-xl bg-gray-50">
+                    <h3 class="text-2xl font-bold text-[#003f5c]">Phase 2</h3>
+                    <p class="font-semibold text-gray-700">Enterprise Scaling & Optimization</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-16 border-t-2 border-gray-200">
+
+        <section id="phase-1" class="my-16">
+            <h2 class="text-4xl font-extrabold text-center text-[#374c80] mb-4">Phase 1: Forging Success from Distress</h2>
+            <p class="text-center text-lg text-gray-600 max-w-4xl mx-auto mb-12">Our initial focus is on companies facing financial distress. This provides a fertile ground to demonstrate our agentic AI's immediate, transformative impact on business continuity and revival, creating powerful, data-driven success stories.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 md:col-span-2">
+                    <h3 class="text-2xl font-bold text-center text-[#374c80] mb-6">Lead Identification: The Revival Pipeline</h3>
+                     <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">We use a proprietary AI-driven process to identify businesses where our intervention can provide the highest and most immediate value.</p>
+                    <div class="flex flex-col md:flex-row items-center justify-around gap-4 text-center">
+                        <div class="flow-step p-4 rounded-lg border-2 w-full md:w-auto">
+                            <div class="text-4xl">📥</div>
+                            <h4 class="font-bold mt-2">Data Ingestion</h4>
+                            <p class="text-sm">Monitor public filings, financial news, and credit ratings.</p>
+                        </div>
+                        <div class="flow-arrow transform rotate-90 md:rotate-0">➔</div>
+                        <div class="flow-step p-4 rounded-lg border-2 w-full md:w-auto">
+                            <div class="text-4xl">📈</div>
+                            <h4 class="font-bold mt-2">Predictive Analytics</h4>
+                            <p class="text-sm">Assign a "Distress Score" and identify vulnerabilities.</p>
+                        </div>
+                        <div class="flow-arrow transform rotate-90 md:rotate-0">➔</div>
+                        <div class="flow-step p-4 rounded-lg border-2 w-full md:w-auto">
+                            <div class="text-4xl">🎯</div>
+                            <h4 class="font-bold mt-2">Prioritization</h4>
+                            <p class="text-sm">Segment leads for targeted, high-impact outreach.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-center text-[#374c80] mb-2">The Automated Revival Toolkit</h3>
+                    <p class="text-center text-gray-600 mb-6">Our AI crafts and deploys personalized outreach focused on immediate, tangible benefits. This chart shows the projected impact focus of our initial messaging.</p>
+                    <div class="chart-container">
+                        <canvas id="revivalToolkitChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-center text-[#374c80] mb-2">Measuring the Turnaround</h3>
+                    <p class="text-center text-gray-600 mb-6">Success is measured by clear, quantifiable KPIs that demonstrate a company's revival. Our agents are designed to optimize these core metrics.</p>
+                    <div class="grid grid-cols-2 gap-4 text-center mt-8">
+                        <div class="kpi-card p-4 rounded-lg">
+                            <h4 class="font-bold text-4xl">40%</h4>
+                            <p class="text-sm font-medium">Target Cost Reduction</p>
+                        </div>
+                        <div class="kpi-card p-4 rounded-lg">
+                            <h4 class="font-bold text-4xl">60%</h4>
+                            <p class="text-sm font-medium">Target Efficiency Gains</p>
+                        </div>
+                        <div class="kpi-card p-4 rounded-lg col-span-2">
+                             <div class="chart-container h-48 max-h-48">
+                                <canvas id="retentionChart"></canvas>
+                            </div>
+                            <p class="text-sm font-medium -mt-4">Target Customer Retention Improvement</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-16 border-t-2 border-gray-200">
+
+        <section id="phase-2" class="my-16">
+            <h2 class="text-4xl font-extrabold text-center text-[#bc5090] mb-4">Phase 2: Scaling to Enterprise Optimization</h2>
+            <p class="text-center text-lg text-gray-600 max-w-4xl mx-auto mb-12">With a portfolio of proven successes, we pivot our strategy. We target large corporations with suboptimal AI implementations, shifting the narrative from survival to achieving an unparalleled competitive edge.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                 <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-center text-[#bc5090] mb-2">Targeting Enterprise Inefficiency</h3>
+                    <p class="text-center text-gray-600 mb-6">Our value proposition for enterprises addresses the common pitfalls of early or poorly planned AI adoption, turning strategic weaknesses into strengths.</p>
+                    <div class="chart-container">
+                        <canvas id="enterpriseTargetChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-center text-[#bc5090] mb-6">The Enterprise Partnership Model</h3>
+                    <p class="text-center text-gray-600 mb-8">We engage corporations through a structured, value-first approach, ensuring alignment and delivering measurable results at every stage.</p>
+                    <div class="space-y-4 text-left">
+                        <div class="flow-step p-4 rounded-lg border-2 flex items-center gap-4">
+                            <div class="text-2xl font-bold text-white bg-[#bc5090] rounded-full w-10 h-10 flex items-center justify-center">1</div>
+                            <div>
+                                <h4 class="font-bold">Pilot Program</h4>
+                                <p class="text-sm">Validate value in a controlled, low-risk environment.</p>
+                            </div>
+                        </div>
+                         <div class="flow-arrow transform rotate-90 mx-auto h-8 w-px bg-[#ffa600]"></div>
+                        <div class="flow-step p-4 rounded-lg border-2 flex items-center gap-4">
+                            <div class="text-2xl font-bold text-white bg-[#bc5090] rounded-full w-10 h-10 flex items-center justify-center">2</div>
+                            <div>
+                                <h4 class="font-bold">Phased Deployment</h4>
+                                <p class="text-sm">Scale agentic AI across departments for maximum impact.</p>
+                            </div>
+                        </div>
+                         <div class="flow-arrow transform rotate-90 mx-auto h-8 w-px bg-[#ffa600]"></div>
+                        <div class="flow-step p-4 rounded-lg border-2 flex items-center gap-4">
+                            <div class="text-2xl font-bold text-white bg-[#bc5090] rounded-full w-10 h-10 flex items-center justify-center">3</div>
+                            <div>
+                                <h4 class="font-bold">Long-Term Partnership</h4>
+                                <p class="text-sm">Provide continuous support, monitoring, and co-development.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const brilliantBlues = {
+                dark_blue: '#003f5c',
+                mid_blue: '#374c80',
+                purple: '#7a5195',
+                magenta: '#bc5090',
+                pink: '#ef5675',
+                orange: '#ff764a',
+                yellow: '#ffa600'
+            };
+
+            const colors = Object.values(brilliantBlues);
+
+            function wrapText(str, maxWidth = 16) {
+                if (str.length <= maxWidth) {
+                    return str;
+                }
+                const words = str.split(' ');
+                let lines = [];
+                let currentLine = words[0];
+                for (let i = 1; i < words.length; i++) {
+                    const word = words[i];
+                    if ((currentLine + ' ' + word).length > maxWidth) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine += ' ' + word;
+                    }
+                }
+                lines.push(currentLine);
+                return lines;
+            }
+
+            const tooltipTitleCallback = function(tooltipItems) {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+
+            const defaultOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                         labels: {
+                            color: brilliantBlues.dark_blue,
+                            font: {
+                                weight: 'bold'
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            };
+
+            const revivalToolkitCtx = document.getElementById('revivalToolkitChart');
+            if (revivalToolkitCtx) {
+                new Chart(revivalToolkitCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: [
+                            wrapText('Drastic Cost Reduction'),
+                            wrapText('Immediate Efficiency Gains'),
+                            wrapText('Enhanced Customer Retention'),
+                            wrapText('Strategic Continuity')
+                        ],
+                        datasets: [{
+                            label: 'Focus of Automated Outreach (%)',
+                            data: [40, 30, 20, 10],
+                            backgroundColor: [
+                                brilliantBlues.pink,
+                                brilliantBlues.orange,
+                                brilliantBlues.yellow,
+                                brilliantBlues.purple,
+                            ],
+                            borderColor: 'rgba(255, 255, 255, 0.5)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        ...defaultOptions,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                ticks: {
+                                    color: brilliantBlues.dark_blue
+                                }
+                            },
+                             y: {
+                                ticks: {
+                                    color: brilliantBlues.dark_blue
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            const retentionCtx = document.getElementById('retentionChart');
+            if (retentionCtx) {
+                new Chart(retentionCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Improved Retention', 'Baseline'],
+                        datasets: [{
+                            label: 'Customer Retention',
+                            data: [25, 75],
+                            backgroundColor: [
+                                brilliantBlues.yellow,
+                                '#e0e0e0'
+                            ],
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                         ...defaultOptions,
+                         plugins: {
+                            ...defaultOptions.plugins,
+                            legend: {
+                                display: false
+                            }
+                         }
+                    }
+                });
+            }
+
+            const enterpriseTargetCtx = document.getElementById('enterpriseTargetChart');
+            if (enterpriseTargetCtx) {
+                new Chart(enterpriseTargetCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: [
+                            'Lagging AI Adoption',
+                            wrapText('High Operational Costs'),
+                            wrapText('Inefficient Data Strategy'),
+                            wrapText('Identified Talent Gaps'),
+                            wrapText('Cybersecurity Vulnerabilities')
+                        ],
+                        datasets: [{
+                            label: 'Rainai Enterprise Value Proposition',
+                            data: [90, 85, 80, 70, 95],
+                            fill: true,
+                            backgroundColor: 'rgba(188, 80, 144, 0.2)',
+                            borderColor: brilliantBlues.magenta,
+                            pointBackgroundColor: brilliantBlues.magenta,
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: brilliantBlues.magenta
+                        }]
+                    },
+                    options: {
+                        ...defaultOptions,
+                        scales: {
+                            r: {
+                                beginAtZero: true,
+                                pointLabels: {
+                                    color: brilliantBlues.dark_blue,
+                                    font: {
+                                        size: 12,
+                                        weight: 'bold'
+                                    }
+                                },
+                                ticks: {
+                                    backdropColor: 'transparent',
+                                    color: 'grey'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+#
+# Author: Jeremiah Jackson-Williams
+# Copyright: Rainai Inc. @2025
+
+import os as ground
+from time import sleep
+import re as skim
+import subprocess as stack0
+import urllib.request as web0
+import urllib.error as web2
+import urllib.response as web3
+from autotrace import currTrace
+import _thread as arachnet
+from Mata.mata00 import mata
+
+def main():
+    def update(passHandle1,passHandle0):
+        currBuild0=open('spectral0dat','a+')
+        currBuild0.seek(0)
+        currBuild1=currBuild0.read()
+        if passHandle0 in currBuild1 or passHandle1 in currBuild1:
+            pass
+        else:
+            print("Data wrangling: "+passHandle0)
+            currBuild0.write(str(passHandle1)+' | https://'+passHandle0+'\n')
+    # def lang00(passHandle5,passHandle1):
+    #     try:
+    #         langHandle0=stack0.run(['ping','-c 4',passHandle1],capture_output=True,
+    #         text=True,
+    #         timeout=6)
+    #         langHandle0=str(langHandle0.stdout)
+    #         aIP=list(set(skim.findall(r'\b(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b',langHandle0)))
+    #         if ("1 received" in langHandle0 or "2 received" in langHandle0 or "3 received" in langHandle0 or "4 received" in langHandle0) and len(aIP)!=0:
+    #             print(str(passHandle5)+' | https://'+str(passHandle1)+" | Status: Active | Type: Ping | AIP: "+str(aIP[0]))
+    #             update(str(passHandle5)+' | https://'+str(passHandle1)+' | Status: Active | Type: Ping | AIP: '+str(aIP[0])+'\n')
+    #     except:
+    #         try:
+    #             langHandle1=web0.urlopen('https://'+passHandle1)
+    #             print(str(passHandle5)+" | https://"+str(passHandle1)+" | Status: Active | Type: Web0 "+str(langHandle1.status))
+    #             update(passHandle5+' | https://'+str(passHandle1)+' | Status: Active | Type: Web0\n')
+    #         except:
+    #             try:
+    #                 langHandle2=stack0.run(['curl -vL','https://'+passHandle1],capture_output=True)
+    #                 langHandle2=str(langHandle2.stdout)
+    #                 aIP=list(set(skim.findall(r'\b(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b',langHandle2)))
+    #                 if ("denied" in langHandle2.lower() or "forbidden" in langHandle2.lower() or "permission" in langHandle2.lower() or "login" in langHandle2.lower()) and len(aIP)!=0:
+    #                     print(str(passHandle5)+' | '+passHandle1," | Status: Active | Type: cURL | AIP: "+str(aIP[0]))
+    #                     update(str(passHandle5)+' | https://'+str(passHandle1)+' | Status: Active | Type: cURL | AIP: '+str(aIP[0])+'\n')
+    #             except:
+    #                 pass
+    def superUpdate(passHandle3,passHandle4):
+        # tmpCrossRef0=stack0.run(['cat',ground.getcwd()+'/Motion/spectral0dat'], capture_output=True,text=True)
+        # if len(tmpCrossRef0.stdout)>10:
+        #     return True
+        # else:
+        with open(passHandle3+passHandle4+'/autosubclean.mita','r') as currHandle0:
+            thisTrace=currTrace
+            for currHandle1 in currHandle0.readlines():
+                currHandle2=currHandle1.split()
+                if int(currHandle2[0])<thisTrace:
+                    pass
+                else:
+                    try:
+                        update(currHandle2[0],currHandle2[1])
+                        thisTrace+=1
+                        reAuto=open('autotrace.py','w')
+                        reAuto.write("""#!/usr/bin/env python3
+# Author: Jeremiah Jackson-Williams
+#
+# Copyright: Rainai Inc. @2025s
+
+currTrace="""+str(thisTrace))
+                        reAuto.close()
+                    except:
+                        pass
+                        thisTrace+=1
+                        reAuto=open('autotrace.py','w')
+                        reAuto.write("""#!/usr/bin/env python3
+# Author: Jeremiah Jackson-Williams
+#
+# Copyright: Rainai Inc. @2025
+
+currTrace="""+str(thisTrace))
+                        reAuto.close()
+    currState0=ground.getcwd()
+    selfName="Motion"
+    selfStates0=('One/mata','Zero/autolinksrc')
+    handleState0=currState0[:-len(selfName)]
+    if 'motion' in ground.getcwd().lower():
+        try:
+            superUpdate(handleState0,selfStates0[1])
+        except:
+            pass
+    elif 'zero/autolinksrc' in ground.getcwd().lower():
+        try:
+            superUpdate('',ground.getcwd())
+        except:
+            pass
+    else:
+        #Transition to relative path required here. Absolute is primitive for functionality.
+        superUpdate('/media/miah/Distorted/migrate/RainaiInc/Spectral',selfStates0[1])
+main()

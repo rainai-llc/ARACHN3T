@@ -1,0 +1,835 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body & Background */
+body {
+    /* Adjusted font stack for better cross-platform consistency */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    background-color: black; /*#F0F0F0 */
+    color: #333;
+}
+
+/* Header */
+.header {
+    /* Adjusted font stack for better cross-platform consistency */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(240, 240, 240, 0.8);
+    color: white; /* This color is overridden by .logo h1, consider removing if not used */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Needed for absolute positioning of .logo and .logout-btn-container */
+    z-index: 10; /* Ensure header is above other content if overlapping */
+}
+
+/* Center the title */
+.logo {
+    /*     position: absolute; */
+    /*     transform: translateX(-50%); /* Ensures title is perfectly centered */ */
+    text-align: center;
+    /* Added to ensure logo is visible and not pushed by other elements */
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.logo h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: red;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* Adjusted to avoid potential overflow on very small screens before media queries kick in */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.topBar {
+    height: 50px; /* This seems to be an empty div, consider if it's truly needed */
+    width: 33px; /* This width seems arbitrary and could cause layout issues */
+    /* If this is meant to be a spacer, consider using margin-top on the content below the header */
+}
+
+/* Navigation (menu items on the right) */
+.nav {
+    font-size: 16px;
+    /*     flex-grow: 1; */
+    /*     flex-basis: auto; */
+    /*     display: flex; */
+    /*     justify-content: flex-end; /* Ensure nav links are pushed to the right */
+    /*     align-items: center; */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    /* margin-left: auto; -- Removed as flex-grow on .nav handles pushing to right */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: green;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #e94e77;
+}
+
+/* Logout Button */
+.logout-btn-container {
+    /* Adjusted to be part of the header flex flow, not absolutely positioned */
+    /* This makes it more robust for responsive layouts */
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left within its own space */
+    position: relative; /* Keep it relative if you need to adjust its position slightly within flex */
+    /* Remove 'right: 20px;' if it's now part of the flex flow, unless you need precise offset */
+    /* flex-shrink: 0; Added to prevent it from shrinking too much */
+    /* Instead of absolute positioning, let flexbox handle its initial position */
+    order: -1; /* Pushes it to the very left in the flex order */
+    align-items: center; /* Vertically align button if needed */
+}
+
+.logout-btn {
+    background-color: blue;
+    color: cyan;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #d84f6d; /* Slightly darker shade on hover */
+}
+
+/* Scroll Feed */
+.scrollFeed {
+    width: 75%;
+    position: relative;
+    margin: auto;
+    min-height: calc(100vh - 100px); /* Adjusted to consider only header height (~100px) */
+    padding: 20px 0; /* Added padding to prevent content from touching edges */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+
+/* Main Content */
+.main-content {
+    /* Adjusted font stack */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center; /* Centers items horizontally */
+    background-color: none; /* No need for 'none', just omit if transparent */
+    border-style: none; /* No need for 'none', just omit if no border */
+}
+
+main h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    padding: 40px;
+    border: 1px solid #888;
+    max-width: 800px;
+    border-radius: 8px;
+    text-align: center;
+    /* Centering with margin: auto and display:flex on parent is usually better for modals */
+    /* The original modal had 'margin: 15% auto;', which also works for basic centering */
+    margin: 15vh auto 5vh auto; /* Keep the existing vertical margin logic */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Added for absolute positioning of close-btn */
+}
+
+.modal .close-btn { /* More specific selector for close button */
+    position: absolute;
+    right: 15px; /* Adjusted slightly */
+    top: 15px; /* Adjusted slightly */
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal .close-btn:hover,
+.modal .close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Position Buttons Grid (Adjusted to Flex for better responsiveness) */
+.position-buttons {
+    display: flex;
+    flex-direction: column; /* Stacks inputs and buttons vertically on all screens */
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    align-items: center; /* Centers the input and button groups */
+}
+
+/* User Entry Input Container */
+.userEntry {
+    margin: 0;
+    width: 100%; /* Take full width of parent (position-buttons) */
+    display: flex;
+    justify-content: center; /* Center the input within userEntry */
+}
+
+.rainaitarget {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Submission Button Container */
+.sub-button {
+    position: static;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the button within sub-button */
+}
+
+/* Position Button Styles */
+.h4ck-btn {
+    padding: 7px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.0rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 7px;
+    width: 100px;
+}
+
+.h4ck-btn:hover {
+    background-color: #d84f6d;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px; /* Slightly reduce horizontal padding */
+        flex-direction: column; /* Stack header items vertically */
+        text-align: center;
+        /* Reset absolute positioning for header elements on mobile */
+        position: static;
+        height: auto; /* Allow header height to adjust */
+    }
+
+    .logout-btn-container {
+        order: 1; /* Place logout button below logo and nav */
+        margin-top: 15px; /* Add space below logo/nav */
+        position: static; /* Remove absolute positioning */
+        justify-content: center; /* Center button on mobile */
+    }
+
+    .logo {
+        position: static; /* Remove absolute positioning */
+        transform: none; /* Remove transform */
+        order: 0; /* Default order */
+    }
+
+    .logo h1 {
+        font-size: 28px; /* Slightly smaller for tablets/large phones */
+        /* Consider text-wrap: wrap; if single line is too long, but then adjust font-size */
+        white-space: normal;
+    }
+
+    .nav {
+        order: 2; /* Place nav links below logo (and logout button if order changes) */
+        flex-basis: auto;
+        justify-content: center; /* Center nav links on mobile */
+        margin-top: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack nav links vertically */
+        gap: 10px;
+        /* margin-top: 20px; - Moved to .nav */
+        align-items: center; /* Center stacked links */
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+    }
+
+    /* Adjust Modal for Smaller Screens */
+    .modal-content {
+        width: 95%; /* Make it wider on mobile */
+        padding: 20px;
+        margin: 10vh auto; /* Adjust vertical margin for better fit on smaller screens */
+    }
+
+    .h4ck-btn {
+        font-size: 0.9rem; /* Slightly smaller font for buttons */
+        padding: 10px; /* More comfortable tap target */
+        width: 90px; /* Slightly adjust width */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px; /* Further reduce padding */
+    }
+
+    .logo h1 {
+        font-size: 22px; /* Even smaller font size on very small phones */
+    }
+
+    .nav-links li a {
+        font-size: 16px;
+    }
+
+    /* No specific changes needed for .position-buttons as it's already column flex */
+}
+
+.copyrightNotice {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: red;
+    font-size: 10px;
+    padding: 20px 40px; /* Use padding instead of margin for better box model behavior */
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.settingsJoker {
+    max-width: 100%;
+
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+    background-color: #F0F0F0 /*#FFB3C1*/; /* Light grey background */
+    /*color: #333;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vh;
+}
+
+/* Header */
+.header {
+    /* Adjusted font stack for better cross-platform consistency */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    display: flex;
+    justify-content: space-between;
+    /*     align-items: center; */
+    padding: 20px 40px;
+    background-color: rgba(240, 240, 240, 0.8);
+    color: white; /* This color is overridden by .logo h1, consider removing if not used */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Needed for absolute positioning of .logo and .logout-btn-container */
+    z-index: 10; /* Ensure header is above other content if overlapping */
+}
+
+/* Center the title */
+.logo {
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%); /* Ensures title is perfectly centered */
+    text-align: center;
+    /* Added to ensure logo is visible and not pushed by other elements */
+    flex-grow: 0;
+    flex-shrink: 0;
+    z-index: 3;
+}
+
+.logo h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: red;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* Adjusted to avoid potential overflow on very small screens before media queries kick in */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.topBar {
+    height: 100px; /* This seems to be an empty div, consider if it's truly needed */
+    width: 333px; /* This width seems arbitrary and could cause layout issues */
+    /* If this is meant to be a spacer, consider using margin-top on the content below the header */
+}
+
+/* Navigation (menu items on the right) */
+/*.nav {
+ *    font-size: 16px;
+ *    /* Added flex-grow to push it to the right,
+ *      and flex-basis/width to give it space */
+ flex-grow: 1;
+ flex-basis: auto;
+ display: flex;
+ /*     justify-content: flex-end; */
+ align-items: center;
+ }*/
+
+ /*.nav-links {
+  *    list-style-type: none;
+  *    display: flex;
+  *    gap: 30px;
+  *    /* margin-left: auto; -- Removed as flex-grow on .nav handles pushing to right */
+  }*/
+
+  .nav-links li a {
+      text-decoration: none;
+      color: green;
+      transition: color 0.3s;
+  }
+
+  .nav-links li a:hover {
+      color: #e94e77;
+  }
+
+  .map-container {
+      height: 100vh;
+      width: 100vh;
+      border-style: dashed;
+      border-color: red;
+  }
+  /* Container */
+  .container {
+      max-width: 777px;
+      width: 777px;
+      height: 30px;
+      padding: 0;
+      margin-top: 0;
+      position: relative;
+      padding-bottom: 0;
+      margin-left: 10px;
+  }
+
+
+  /* Heading */
+  .rainailogo {
+      position: relative;
+      height: auto;
+      width:70vh;
+      top: auto;
+      margin-bottom: 2rem;
+  }
+
+  /* Grid Items (Options) */
+  .option {
+      /*background-color: #ffffff;*/ /* White background for each option */
+      padding: 2rem;
+      border-radius: 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      text-align: center;
+      cursor: pointer;
+      border-left: 5px solid transparent; /* Border to indicate selection */
+      top: 10px;
+  }
+
+  .option:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Hover colors for each option */
+  .option:hover:nth-child(1) {
+      border-left-color: #384ef4; /* Blue for Option 1 */
+  }
+
+  .option:hover:nth-child(2) {
+      border-left-color: #384ef4; /* Red for Option 2 */
+  }
+
+  .option:hover:nth-child(3) {
+      border-left-color: #384ef4; /* Green for Option 3 */
+  }
+
+  /* Icon styles */
+  .option-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #8e44ad; /* Purple icon color for consistency */
+  }
+
+  /* Titles and description */
+  .option h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #2c3e50; /* Dark grey color */
+  }
+
+  .option p {
+      font-size: 1rem;
+      color: #7f8c8d; /* Light grey for description */
+  }
+
+  /* Button-like effect on hover */
+  .option:hover h2,
+.option:hover p {
+    color: #3498db; /* Change text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Stack options vertically on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Adjust the heading size on smaller screens */
+    }
+
+    .option {
+        padding: 1.5rem;
+    }
+}
+
+.logo {
+    position: absolute;
+    height: 222px;
+    width: 85%;
+    padding: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+    top: 0%;
+    padding-left: 1px;
+    margin-left: 0;
+}
+.about {
+    position: relative;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    border-left: 5px solid transparent; /* Border to indicate selection */
+    top: 20%;
+    margin: 30px;
+    margin-left: 0;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+}
+
+.aboutIcon {
+    height: 75px;
+}
+
+.about:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover colors for each option */
+.about:hover:nth-child(1) {
+    border-left-color: #384ef4; /* Blue for Option 1 */
+}
+
+.about:hover {
+    border-left-color: #384ef4; /* Change text color on hover */
+}
+
+.about1 {
+    position: absolute;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+    height: auto;
+    top: 15%;
+    padding: 60px;
+    margin-left: 12px;
+    font-size: 19px;
+    background-color: #E0F7FA;
+    text-align: center;
+}
+.IP {
+    margin-left: 0px;
+    height: 444px
+    position: absolute;
+    margin-top: 7%;
+    max-width: 60%
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+    /*padding: 60px;*/
+    font-size: 19px;
+    background-color: #E0F7FA;
+}
+
+.dailycount {
+    position: relative;
+    top: 5%;
+    width: auto;
+    margin: 1px;
+    height: auto;
+    font-size: 17px;
+    color: #384ef4;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+    align-content: center;
+}
+
+.pulse {
+    position: sticky;
+    height: auto;
+    width: 50vh;
+    padding: 30px;
+    margin: 30px;
+    margin-left: auto;
+    background-color: transparent;
+    border-radius: 5px;
+    animation: pulse 2s infinite;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Dot styles */
+
+/* Hub styling - position: fixed remains the same */
+.arachnet-hub {
+    border-radius: 100%;
+    background-color: ivory; /* Changed from `none` for better visibility */
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #00FFFF;
+    box-shadow: 0 0 10px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF;
+    z-index: 2; /* Ensure the hub is above the lines */
+}
+
+/* SVG layer to draw the lines */
+#vector-layer {
+position: absolute;
+top: 0;
+left: 0;
+width: 100vw; /* Viewport width */
+height: 100vh; /* Viewport height */
+z-index: 1; /* Place the lines behind the hub and dots */
+background-color: black;
+}
+
+/* Styling for the dynamically created dots */
+.dot {
+    position: absolute;
+    width: 267px;
+    height: 267px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #333;
+    box-shadow: 0 0 10px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF; /* Or any other color */
+    z-index: 3; /* Ensure dots are above the lines */
+    color: yellow;
+    transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+/* Styling for the SVG lines */
+.vector-line {
+    stroke: #d84f6d; /* Line color */
+    stroke-width: 0.7;
+}
+
+.arachnet-hub:hover {
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF;
+}
+
+.hub-vis {
+    max-width: 70%;
+    margin-left: 15%;
+}
+
+.title {
+    color: ivory;
+}
+
+.dot:hover {
+    height: 299px;
+    width: 299px;
+}
+
+.dot p {
+    text-align: center; /* Center the text horizontally */
+    font-size: 1.2em;    /* Increase the font size (adjust as needed) */
+    margin: 0;          /* Remove default paragraph margins to better control centering */
+    line-height: inherit; /* Make line-height the same as the dot's height if needed for vertical centering */
+}
+
+.dot0 { top: 10%; left: 10%; }
+.dot1 { top: 20%; left: 80%; }
+.dot2 { top: 23%; left: 50%; }
+.dot3 { top: 40%; left: 20%; }
+.dot4 { top: 50%; left: 70%; }
+.dot5 { top: 60%; left: 30%; }
+.dot6 { top: 79%; left: 90%; }
+.dot7 { top: 80%; left: 40%; }
+.dot8 { top: 15%; left: 25%; }
+.dot9 { top: 25%; left: 75%; }
+.dot10 { top: 35%; left: 60%; }
+.dot11 { top: 45%; left: 15%; }
+.dot12 { top: 55%; left: 85%; }
+.dot13 { top: 65%; left: 40%; }
+.dot14 { top: 75%; left: 80%; }
+.dot15 { top: 85%; left: 60%; }
+.dot16 { top: 16%; left: 90%; }
+.dot17 { top: 30%; left: 40%; }
+.dot18 { top: 76%; left: 10%; }
+.dot19 { top: 25%; left: 30%; }
+.dot20 { top: 10%; left: 90%; }
+.dot21 { top: 87%; left: 50%; }
+.dot22 { top: 70%; left: 90%; }
+.dot23 { top: 80%; left: 30%; }
+.dot24 { top: 15%; left: 55%; }
+.dot25 { top: 25%; left: 5%; }
+.dot26 { top: 75%; left: 60%; }
+.dot27 { top: 95%; left: 15%; }
+.dot28 { top: 35%; left: 85%; }
+
+@keyframes scatter {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(60px, 70px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.tokenCheck {
+    margin-top: 20%;
+    margin-bottom: 40%;
+    border-style: solid;
+    border-width: 0.04px;
+    border-color: grey;
+    border-radius: 10%;
+    border-inline-color: #8A2BE2;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+}
+
+.profile {
+    height:70px;
+    width: 70px;
+    margin-top: 10%;
+}
+
+.loginButton {
+    height:40px;
+    width:40px;
+    margin-top: 20px;
+}
+
+.loginButton:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.req {
+    margin-top: 40%;
+    color: #8A2BE2;
+    font-size: 13px;
+}
+
+.signin {
+    background-color: transparent;
+    border-style: none;
+}
+
+.mod {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 1.0); /* Black with opacity */
+}
+
+.mod-content {
+    color: grey;
+    margin: 15% auto;
+    font-size: 25px;
+}
+
+.signup-btn {
+    background-color: transparent;
+    border-style: none;
+}
+
+.sendIcon {
+    height: 30px;
+    width: 40px;
+}
+
+.send {
+    margin-top: 3%;
+}
+
+/*.p {
+ * c *olor: white;
+ * text-align: center;
+ * font-size:
+ * }*/

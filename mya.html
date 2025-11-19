@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MYA</title>
+        <link rel="stylesheet" href="mya.css">
+        <link rel="icon" href="/favicon.ico" sizes="any">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <style>
+            /* Modal Styles */
+            .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            color: white;
+            }
+            .modal-content {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            }
+            .modal h2 {
+            margin-bottom: 20px;
+            }
+            .modal button {
+            margin: 5px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            }
+            .modal button:hover {
+            background-color: #45a049;
+            }
+            .close-btn {
+            cursor: pointer;
+            color: red;
+            font-size: 20px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            }
+            /* Address input styling */
+            .address-input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 100%;
+            max-width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            }
+            .address-submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            }
+            .address-submit-btn:hover {
+            background-color: #45a049;
+            }
+
+            .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: calc(95vh - 20px);
+            width: 100vw;
+            top: -4%;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(10px) saturate(180%);
+            -webkit-backdrop-filter: blur(10px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden; /* Contain scrolling */
+/*             margin-left: 25%; */
+            }
+
+            /* Add a messages container for scrolling */
+            #chatMessages {
+            flex: 1; /* Take up available space */
+            overflow-y: auto; /* Enable vertical scrolling */
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 10px;
+            white-space: pre-wrap;
+            }
+
+            .chat-bubble {
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            word-wrap: break-word;
+            color: lime;
+            white-space: pre-wrap;
+            }
+
+            .chat-bubble.user {
+            background-color: none ;
+            color: cyan;
+            align-self: flex-start;
+            white-space: pre-wrap;
+            }
+
+            .chat-bubble.bot {
+            background-color: grey;
+            align-self: flex-end;
+            white-space: pre-wrap;
+            }
+
+            .chat-input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            flex-shrink: 0; /* Prevent input from shrinking */
+            }
+
+            .chat-input {
+            color: white;
+            width: 95%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            /*border-radius: 5px;*/
+            word-wrap: break-word; /* Enable word wrapping */
+            overflow-wrap: break-word; /* Modern browsers */
+            resize: none; /* Prevent resizing */
+            min-height: 40px; /* Set a minimum height */
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            }
+
+            .send-btn {
+            width: 70px;
+            margin-right: 20px;
+            background: rgba(255, 255, 255, 0.37);
+            color: white;
+            padding: 13px;
+            font-size: 1em;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 26px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            cursor: pointer;
+            }
+
+            .send-btn:hover {
+            background-color: rgba(0, 0, 0, 0.19);
+            }
+            .sendIcon {
+            height: 20px;
+            width: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dot dot0"></div>
+        <div class="dot dot1"></div>
+        <div class="dot dot2"></div>
+        <div class="dot dot3"></div>
+        <div class="dot dot4"></div>
+        <div class="dot dot5"></div>
+        <div class="dot dot6"></div>
+        <div class="dot dot7"></div>
+        <div class="dot dot8"></div>
+        <div class="dot dot9"></div>
+        <div class="dot dot10"></div>
+        <div class="dot dot11"></div>
+        <div class="dot dot12"></div>
+        <div class="dot dot13"></div>
+        <div class="dot dot14"></div>
+        <div class="dot dot15"></div>
+        <header class="header">
+            <div class="logo">
+                <h1 class="title"><img class="topBar" src=/images/backdrop.png></h1>
+            </div>
+            <!-- Logout Button -->
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="/demo">Vector Scan</a></li>
+                    <li><a href="/mya">Project-MYA</a></li>
+                    <li><a href="/database">Database</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="chat-container" id="chatContainer">
+            <div id="chatMessages"></div>
+            <div class="chat-input-container">
+            <textarea id="chatInput" class="chat-input" placeholder="Type your message..."></textarea>
+            <button type="submit" class="send-btn" id="sendBtn"><img class='sendIcon' src='/images/send.png'></img></button>
+            <script src='/js/mci.js'></script>
+            </div>
+        </div>
+        <script src="/js/chat.mjs"></script>
+    </body>
+    <div class="copyrightNotice">
+        <footer><p>Copyright:<br> Rainai Inc. @2025</p></footer>
+    </div>
+</html>

@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+wget -i /media/miah/Distorted/migrate/RainaiInc/Spectral/Autolink/autosubclean.txt -t 1 -T 5

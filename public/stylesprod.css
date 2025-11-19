@@ -1,0 +1,526 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+  background: black; /* Light grey background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.map-container {
+  height: 100vh;
+  width: 100vh;
+  border-style: dashed;
+  border-color: red;
+}
+/* Container */
+.container {
+  max-width: 777px;
+  width: 777px;
+  height: 30px;
+  padding: 0;
+  margin-top: 0;
+  position: relative;
+  padding-bottom: 0;
+  margin-left: 10px;
+}
+
+
+/* Heading */
+.rainailogo {
+  position: relative;
+  height: auto;
+  width:70vh;
+  top: auto;
+  margin-bottom: 2rem;
+}
+
+/* Grid Items (Options) */
+.option {
+  /*background-color: #ffffff;*/ /* White background for each option */
+  padding: 2rem;
+  border-radius: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  border-left: 5px solid transparent; /* Border to indicate selection */
+  top: 10px;
+}
+
+.option:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover colors for each option */
+.option:hover:nth-child(1) {
+  border-left-color: #384ef4; /* Blue for Option 1 */
+}
+
+.option:hover:nth-child(2) {
+  border-left-color: #384ef4; /* Red for Option 2 */
+}
+
+.option:hover:nth-child(3) {
+  border-left-color: #384ef4; /* Green for Option 3 */
+}
+
+/* Icon styles */
+.option-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #8e44ad; /* Purple icon color for consistency */
+}
+
+/* Titles and description */
+.option h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50; /* Dark grey color */
+}
+
+.option p {
+  font-size: 1rem;
+  color: #7f8c8d; /* Light grey for description */
+}
+
+/* Button-like effect on hover */
+.option:hover h2,
+.option:hover p {
+  color: #3498db; /* Change text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Stack options vertically on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem; /* Adjust the heading size on smaller screens */
+  }
+
+  .option {
+    padding: 1.5rem;
+  }
+}
+
+.logo {
+  position: absolute;
+  height: 222px;
+  width: 85%;
+  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+  top: 0%;
+  padding-left: 1px;
+  margin-left: 0;
+}
+.about {
+  position: relative;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  border-left: 5px solid transparent; /* Border to indicate selection */
+  top: 20%;
+  margin: 30px;
+  margin-left: 0;
+  font-size: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+}
+
+.aboutIcon {
+  height: 75px;
+}
+
+.about:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover colors for each option */
+.about:hover:nth-child(1) {
+  border-left-color: #384ef4; /* Blue for Option 1 */
+}
+
+.about:hover {
+  border-left-color: #384ef4; /* Change text color on hover */
+}
+
+.about1 {
+  position: absolute;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+  height: auto;
+  top: 15%;
+  padding: 60px;
+  margin-left: 12px;
+  font-size: 19px;
+  background-color: #E0F7FA;
+  text-align: center;
+}
+.IP {
+  margin-left: 0px;
+  height: 444px
+  position: absolute;
+  margin-top: 7%;
+  max-width: 60%
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+  /*padding: 60px;*/
+  font-size: 19px;
+  background-color: #E0F7FA;
+}
+
+.dailycount {
+  /* Center the element on the page */
+  position: absolute; /* Use 'fixed' to center it in the viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Original styles you had, with some minor clean-up */
+  width: auto;
+  height: auto;
+  font-size: 17px;
+  color: #384ef4;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+}
+
+.pulse {
+  position: sticky;
+  height: auto;
+  width: 50vh;
+  padding: 30px;
+  margin: 30px;
+  margin-left: auto;
+  background-color: transparent;
+  border-radius: 5px;
+  animation: pulse 2s infinite;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Dot styles */
+
+/* Hub styling - position: fixed remains the same */
+.arachnet-hub {
+  border-radius: 100%;
+  background-color: none; /* Changed from `none` for better visibility */
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #00FFFF;
+  box-shadow: 0 0 10px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF;
+  z-index: 2; /* Ensure the hub is above the lines */
+}
+
+/* SVG layer to draw the lines */
+#vector-layer {
+position: absolute;
+top: 0;
+left: 0;
+width: 100vw; /* Viewport width */
+height: 100vh; /* Viewport height */
+z-index: 1; /* Place the lines behind the hub and dots */
+}
+
+/* Styling for the dynamically created dots */
+.dot {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: black;
+  box-shadow: 0 0 10px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF; /* Or any other color */
+  z-index: 3; /* Ensure dots are above the lines */
+  color: yellow;
+  transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+/* Styling for the SVG lines */
+.vector-line {
+  stroke: ivory; /* Line color */
+  stroke-width: 0.7;
+}
+
+.arachnet-hub:hover {
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF;
+}
+
+.hub-vis {
+  max-width: 70%;
+  margin-left: 15%;
+}
+
+.title {
+  color: ivory;
+}
+
+.dot:hover {
+  height: 295px;
+  width: 295px;
+}
+
+.dot p {
+  text-align: center; /* Center the text horizontally */
+  font-size: 1.2em;    /* Increase the font size (adjust as needed) */
+  margin: 0;          /* Remove default paragraph margins to better control centering */
+  line-height: inherit; /* Make line-height the same as the dot's height if needed for vertical centering */
+}
+
+.dot0 { top: 10%; left: 10%; }
+.dot1 { top: 20%; left: 80%; }
+.dot2 { top: 23%; left: 50%; }
+.dot3 { top: 40%; left: 20%; }
+.dot4 { top: 50%; left: 70%; }
+.dot5 { top: 60%; left: 30%; }
+.dot6 { top: 79%; left: 90%; }
+.dot7 { top: 80%; left: 40%; }
+.dot8 { top: 15%; left: 25%; }
+.dot9 { top: 25%; left: 75%; }
+.dot10 { top: 35%; left: 60%; }
+.dot11 { top: 45%; left: 15%; }
+.dot12 { top: 55%; left: 85%; }
+.dot13 { top: 65%; left: 40%; }
+.dot14 { top: 75%; left: 80%; }
+.dot15 { top: 85%; left: 60%; }
+.dot16 { top: 16%; left: 90%; }
+.dot17 { top: 30%; left: 40%; }
+.dot18 { top: 76%; left: 10%; }
+.dot19 { top: 25%; left: 30%; }
+.dot20 { top: 10%; left: 90%; }
+.dot21 { top: 87%; left: 50%; }
+.dot22 { top: 70%; left: 90%; }
+.dot23 { top: 80%; left: 30%; }
+.dot24 { top: 15%; left: 55%; }
+.dot25 { top: 25%; left: 5%; }
+.dot26 { top: 75%; left: 60%; }
+.dot27 { top: 95%; left: 15%; }
+.dot28 { top: 35%; left: 85%; }
+
+@keyframes scatter {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.tokenCheck {
+  display: flex; /* Makes it a flex container */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Centers children horizontally */
+  justify-content: space-around; /* Distributes space evenly */
+
+  /* Centering the container itself */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Sizing and borders using relative and viewport units */
+  overflow: hidden;
+  border-style: solid;
+  border-width: 0.2rem; /* Use relative units for borders */
+  border-color: grey;
+  border-radius: 10%;
+  border-inline-color: #8A2BE2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+  max-width: 45vw;
+  width: 45vw; /* Maintain the responsive width */
+  height: 65vh; /* Maintain the responsive height */
+}
+
+/*.profile {
+  height:100px;
+  width: 100px;
+  margin-top: 20%;
+}*/
+
+.profile {
+  width: 55%; /* Use a percentage of the parent's width */
+  height: auto;
+  margin-top: 10%; /* Use percentage margins for spacing */
+}
+
+/*.loginButton {
+  height:40px;
+  width:40px;
+  margin-top: 20px;
+}*/
+
+.loginButton {
+  width: 2.5rem; /* Use a relative font unit for size */
+  height: 2.5rem;
+  margin-top: 2rem;
+}
+
+
+
+.loginButton:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF;
+}
+
+/*.req {
+  margin-top: 10%;
+  color: #8A2BE2;
+  font-size: 13px;
+}*/
+
+.req {
+  margin-top: 2rem;
+  color: #8A2BE2;
+  font-size: 1rem; /* Use a base font size in a relative unit */
+}
+
+.signin {
+  background-color: transparent;
+  border-style: none;
+}
+
+.mod {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999; /* This ensures it's on top of everything */
+
+  /* Use flexbox to center its content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* The background color and display are controlled by JavaScript
+   *    The 'display: none' from your JS will override this when it is hidden */
+  background-color: rgba(0, 0, 0, 0.7); /* A semi-transparent overlay */
+}
+
+.mod-content {
+  color: black;
+  margin: 15% auto;
+  font-size: 25px;
+}
+
+.signup-btn {
+  background-color: transparent;
+  border-style: none;
+}
+
+.sendIcon {
+  height: 30px;
+  width: 40px;
+}
+
+.send {
+  margin-top: 5%;
+  background-color: none;
+  border-style: none;
+}
+
+.send:hover {
+  transform: translateY(-10px);
+}
+
+/* Container for the video */
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  overflow: hidden; /* Important for the pseudo-element */
+}
+
+/* The actual video element */
+#myVideo {
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+object-fit: cover;
+}
+
+/* The TINT / OVERLAY */
+.video-background::after {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute; /* Position it relative to the .video-background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Black with 50% opacity */
+  /* You can change the color and opacity:
+   *    - rgba(0, 0, 0, 0.5) for a dark tint
+   *    - rgba(255, 0, 0, 0.3) for a reddish tint
+   *    - rgba(0, 100, 200, 0.4) for a blue tint
+   */
+  z-index: 0; /* Place it above the video (z-index: -1) but below content (z-index: 1) */
+}
+
+
+/* Your content on top */
+.content {
+  position: relative; /* Needs to be positioned to honor z-index */
+  z-index: 1; /* Ensure content is above the tint and video */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  /* Add more styles for your content */
+}
+
+/*.p {
+  color: white;
+  text-align: center;
+  font-size:
+}*/

@@ -1,0 +1,14 @@
+			app.py ----->	Zero	----->	One ------>	Memorylink
+			  |		  |		 |		    |
+			  |		  |		|||		   |\|
+			  |		  |		 |		    |
+			rt File		  |		 |		    |
+					  |		 |		    |
+					mita	^	 |		    |
+							mata		    |
+							 |		    |
+							 ------->Thread<-----
+								   ||
+								   ||
+								   ||
+								 Thread								

@@ -1,0 +1,337 @@
+/* General Body Styles */
+body {
+    /* Use 'backdrop.png' as the background image and your gradient */
+    background-image: linear-gradient(to top, black, #3EA99F, black);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* This is the key to making it fill the screen */
+    background-attachment: fixed; /* Optional, but creates a nice parallax effect */
+
+    /* Other body styles you already had */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Courier New', monospace;
+}
+h1 {
+    /* To ensure the logo (assuming it's wrapped in or is the h1 content) is truly centered */
+    text-align: center;
+    color: ivory;
+    font-family: 'Courier New', monospace;
+    width: 100%; /* Take full width to allow text-align to center effectively */
+    padding: 20px 0; /* Add some padding for spacing */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    position: relative; /* Or remove if not needed for sticky behavior */
+    z-index: 10; /* Ensure it's above other content if needed */
+}
+
+/* Images (like the rainaiInc logo) */
+img {
+    height: auto; /* Maintain aspect ratio */
+    max-width: 666px; /* Adjust max-width as needed for the logo size */
+    display: block; /* Remove extra space below image */
+    margin: 0 auto; /* Center image horizontally if it's the only content in a block */
+}
+
+/* Headings */
+h2 {
+    color: limegreen;
+    text-align: center;
+    width: 100%; /* Ensure headings take full width for centering */
+    box-sizing: border-box;
+    padding: 10px 0; /* Add some padding */
+}
+
+h3 {
+    color: ivory; /* Kept your color */
+    text-align: center;
+    border-style: double;
+    border-color: cadetblue;
+    /* Use percentage width for responsiveness and margin auto for centering */
+    width: 80%; /* Adjust as needed */
+    margin: 20px auto; /* Center horizontally with auto margins */
+    padding: 10px; /* Add padding inside the border */
+    box-sizing: border-box;
+}
+
+h5 {
+    color: cyan; /* Kept your color */
+    font-size: 1.1em; /* Use em for font size for better scalability */
+    text-align: center; /* Center h5 elements */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 0;
+}
+
+/* Contact and Youtube sections (if you're using these outside the grid) */
+.Contact,
+.Youtube {
+    width: 90%; /* Use percentage width for responsiveness */
+    max-width: 600px; /* Set a max-width to prevent stretching on large screens */
+    margin: 1% auto; /* Center horizontally with auto margins and add vertical spacing */
+    padding: 15px; /* Add internal padding */
+    box-sizing: border-box;
+    border-color: cadetblue;
+    border-style: solid; /* Use solid border for Contact to differentiate or keep consistent */
+    color: limegreen; /* Kept your color */
+    text-align: center; /* Center content within these sections */
+}
+
+/* Video adjustments (if you have video elements directly) */
+video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* --- GRID LAYOUT CONTAINER FOR WIDGETS --- */
+.widgets-grid-container {
+    display: grid; /* Turns the container into a grid context */
+    /* Defines a 3-column layout for the top row:
+     *      - repeat(3, 1fr): Creates exactly 3 columns, each taking an equal fraction of the space.
+     *        This ensures three widgets per row for larger screens.
+     */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Space between grid items (widgets), both horizontally and vertically */
+    width: 98%; /* Increased width to fill more of the viewport */
+    max-width: 1400px; /* Increased max-width for very large screens */
+    margin: 30px auto; /* Center the grid container and add vertical space */
+    padding: 10px; /* Internal padding for the grid container */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Widget styles - Configured to work within the grid */
+.widget00,
+.widget01,
+.widget03 { /* widget02 has specific rules below */
+    padding: 20px; /* Consistent internal padding */
+    box-sizing: border-box;
+    text-align: center;
+    border-color: cadetblue; /* Kept your color */
+    font-family: 'Courier New', monospace;
+    /* Use flexbox within each widget to center its internal content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+}
+
+.widget00,
+.widget03 {
+    background-image: linear-gradient(to right, black, #3EA99F, black); /* Kept your gradient */
+    border-style: double;
+}
+
+.widget01 {
+    color: black; /* Kept your color */
+    border-style: none; /* No border for this one */
+    padding: 20px; /* Adjusted padding */
+}
+
+/* --- Specific styling for Tableau Visuals widget (widget02) --- */
+.widget02 {
+    /* Forces widget02 to span all 3 columns, dropping it to a new row */
+    grid-column: 1 / -1; /* Spans from the first column line to the last */
+
+    /* Existing styles for widget02 */
+    background-image: linear-gradient(to right, black, #3EA99F, black); /* Kept your gradient */
+    color: none; /* Kept your color */
+    border-style: double;
+    padding: 30px; /* Larger padding for this specific widget */
+
+    /* Ensure content within the widget is centered as well */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Include padding in total size */
+}
+
+/* Specific styling for the Tableau embed's container */
+.widget02 .tableauPlaceholder {
+    width: 100%; /* Ensure container fills the widget's width */
+    height: 70vh; /* Set a proportional height for the Tableau chart based on viewport height */
+    /* Adjust '70vh' as needed for optimal chart visibility */
+    overflow: hidden; /* Hide any overflow from the embed */
+    margin: 0 auto; /* Center it horizontally within the widget */
+    display: flex; /* Use flex to help center the object inside */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Force the Tableau object itself to fill its container */
+.widget02 .tableauPlaceholder object {
+    display: block !important; /* Ensure the Tableau object is visible and acts as a block */
+    width: 100% !important; /* Force the Tableau embed to fill its container's width */
+    height: 100% !important; /* Force the Tableau embed to fill its container's height */
+}
+
+/* Description text */
+.description {
+    color: ivory; /* Kept your color */
+    font-size: 1.25em; /* Use em for font size */
+    width: 90%; /* Responsive width */
+    max-width: 900px; /* Max width for readability */
+    margin: 2% auto 3% auto; /* Center and add vertical margins */
+    text-align: center; /* Center the description text */
+    line-height: 1.6; /* Improve readability with line height */
+    box-sizing: border-box;
+}
+
+/* Links */
+a {
+    color: #0fe04e; /* Kept your color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover for better UX */
+}
+
+/* Paragraphs (ensure consistency) */
+p {
+    color: ivory; /* Kept your color */
+    position: relative;
+    text-align: center;
+    width: 90%; /* Responsive width */
+    max-width: 800px; /* Max width for readability */
+    margin: 1% auto; /* Center horizontally */
+    box-sizing: border-box;
+}
+
+/* Specific sections */
+.autopilot,
+.about,
+.about_body,
+.spctitle,
+.specialties {
+    color: ivory; /* Kept your color */
+    text-align: center; /* Center all text in these sections */
+    width: 90%; /* Responsive width */
+    max-width: 900px; /* Max width for readability */
+    margin: 1% auto; /* Center horizontally with some vertical margin */
+    box-sizing: border-box;
+}
+
+.autopilot {
+    margin-top: 5%; /* Specific top margin */
+}
+
+.spctitle {
+    color: cadetblue; /* Kept your color */
+    margin-top: 1%;
+}
+
+.specialties {
+    font-size: 1.1em; /* Adjust font size relative to parent */
+    margin-top: 5%;
+}
+
+/* Responsive adjustments (Media Queries) */
+/* For screens up to 992px wide (e.g., larger tablets in landscape) */
+@media (max-width: 992px) {
+    .widgets-grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Fallback to 2 columns */
+        gap: 15px;
+        width: 98%;
+    }
+    /* Tableau still spans all available columns, which is now 2 */
+    .widget02 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* For screens up to 768px wide (e.g., smaller tablets, larger phones in landscape) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em; /* Smaller font size on smaller screens */
+    }
+
+    img {
+        max-width: 100px; /* Smaller logo on smaller screens */
+    }
+
+    .widgets-grid-container {
+        grid-template-columns: 1fr; /* Stack into a single column */
+        gap: 15px;
+        width: 98%;
+    }
+    .widget02 {
+        grid-column: 1 / -1; /* Tableau still spans the single column */
+    }
+    /* Reduce Tableau height for smaller screens to prevent excessive scrolling */
+    .widget02 .tableauPlaceholder {
+        height: 50vh; /* Adjust Tableau height for mobile */
+    }
+
+    .Contact,
+    .Youtube,
+    .description,
+    p,
+    .autopilot,
+    .about,
+    .about_body,
+    .spctitle,
+    .specialties {
+        width: 95%;
+        padding: 10px;
+    }
+
+    video {
+        min-width: 90%;
+    }
+}
+
+/* For screens up to 480px wide (e.g., most mobile phones in portrait) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    img {
+        max-width: 80px;
+    }
+
+    .widgets-grid-container {
+        grid-template-columns: 1fr; /* Explicitly stack all widgets into a single column */
+        gap: 10px;
+        width: 98%;
+    }
+
+    .Contact,
+    .Youtube,
+    .description,
+    p,
+    .autopilot,
+    .about,
+    .about_body,
+    .spctitle,
+    .specialties {
+        width: 98%;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* For smaller screens, make the image's width a percentage of the viewport */
+    img {
+        max-width: 90%; /* The image will take up 90% of the screen width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Add a rule for your logo container to ensure it is centered as well */
+.rainaiInc-logo {
+    display: block; /* Ensures the div behaves like a block element */
+    margin: 0 auto; /* This centers the block itself */
+    text-align: center; /* This centers the content inside the block (e.g., the <a> tag) */
+    width: 100%; /* Ensures it takes up full width to allow for centering */
+}
