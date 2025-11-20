@@ -79,6 +79,17 @@ IFYKYK
 
 @aws.com --> DNS takeover in the wild attached.. ^✨
 
+#### Original URL to document alert AWS to Google ?  #working on Reporod.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/823232b1-e790-408f-af6f-da5e55ea420d" />
+
+#### Tested DNS path --> https://eu-bob-dispatch-gamma-alexa.amazon.ca/index.htm  standard resource not found response
+#### Image:
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7179310d-ec85-450d-9e5a-3690159f8078" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bd01758c-73f9-4695-babd-fb4eef16d49e" />
+
+
 #### More Syntax between SelfRecognition in Linux Runtime .sine~0.
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7b0e0611-eb66-4f79-8f6f-4ca9360a2f1c" />
