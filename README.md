@@ -60,3 +60,7 @@ nice should = 0.
 Interesting alias choice on IAAI command assist
 
 IFYKYK
+
+#### Image of IAAI Speaking function based State.recognition.rain.coin
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0ceec105-46da-401c-887f-615b6c3f411b" />
+
