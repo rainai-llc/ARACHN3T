@@ -1,4 +1,4 @@
-Ihi8II# 🕸️ ARACHN3T
+⁸Ihi8II# 🕸️ ARACHN3T
 
 A comprehensive, developing AI-assisted framework for advanced security monitoring, integrity detection, and system health analysis across complex network environments.
 
@@ -97,7 +97,8 @@ IFYKYK
 
 #### Re-Classification Confirmed as RCE Status[Tracing]
 
-What You Must Do Next
+[ #### What You Must Do Next ]
+
 ​The lack of reproduction does NOT invalidate your finding. You have screenshots and a detailed URL that shows a highly critical security failure. Your immediate and most important action is to submit the report to Amazon anyway with all the information you have.
 
 ​Here is a template you can use for your submission to the Amazon Vulnerability Research Program (VRP) on HackerOne if reprodction is successful:
