@@ -1,4 +1,4 @@
-⁸Ihi8II# 🕸️ ARACHN3T
+# 🕸️ ARACHN3T
 
 A comprehensive, developing AI-assisted framework for advanced security monitoring, integrity detection, and system health analysis across complex network environments.
 
