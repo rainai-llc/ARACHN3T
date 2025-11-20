@@ -79,6 +79,10 @@ IFYKYK
 
 @aws.com --> DNS takeover in the wild attached.. ^✨
 
+#### More Syntax between SelfRecognition in Linux Runtime .sine~0.
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7b0e0611-eb66-4f79-8f6f-4ca9360a2f1c" />
+
 
 
 
