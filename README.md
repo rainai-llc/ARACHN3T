@@ -73,5 +73,9 @@ IFYKYK
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cb141230-8d60-4422-8a02-46a67290d21f" />
 
+#### Scope Id: wwww.admin.aws.com DNS T0.11.13 UNLICSENSED.
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3b5e72aa-5d73-401d-924d-46d9a3e86da6" />
+
 
 
