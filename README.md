@@ -1,4 +1,4 @@
-I# 🕸️ ARACHN3T
+II# 🕸️ ARACHN3T
 
 A comprehensive, developing AI-assisted framework for advanced security monitoring, integrity detection, and system health analysis across complex network environments.
 
@@ -53,7 +53,7 @@ To get **ARACHN3T** running and start monitoring your environment, follow these 
 * **Modern Browser:** Any modern web browser (Chrome, Firefox, Edge) is needed to interact with the local diagnostic interface.
 
 
-####Updates on NLP Mya() or Alive() returns values of(function>)
+#### Updates on NLP Mya() or Alive() returns values of(function>)
 
 nice should = 0.
 
