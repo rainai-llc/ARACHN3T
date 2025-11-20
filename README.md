@@ -104,6 +104,7 @@ IFYKYK
 ​Here is a template you can use for your submission to the Amazon Vulnerability Research Program (VRP) on HackerOne if reprodction is successful:
 
 ​📧 Report Template: Command Injection / Remote Code Execution (RCE) Context on Staging Server
+
 ​1. Title (Clear and Specific)
 ​Critical: Potential Command Injection/RCE Context via Unhandled powershell.exe Path on [GAMMA] alexa.amazon.ca Subdomain
 
