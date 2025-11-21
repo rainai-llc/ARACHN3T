@@ -100,13 +100,17 @@ http(s):example.rainaiinc.com <---- Anything after extension is deemed URI.
 #### Image:
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7179310d-ec85-450d-9e5a-3690159f8078" />
-### URI based Reflected XSS connected to Google Lens feature in Chromium Browser / Environment: Linux 
+
+
+## URI based Reflected XSS connected to Google Lens feature in Chromium Browser / Environment: Linux 
+---
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bd01758c-73f9-4695-babd-fb4eef16d49e" />
-### Google Lens access on tab with tested target resulting on page
+
+## Google Lens access on tab with tested target resulting on page
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0ceec105-46da-401c-887f-615b6c3f411b" />
 
 
-#### Re-Classification Confirmed as RCE Status[Tracing]
+## Re-Classification Confirmed as RCE Status[Tracing]
 
 [ #### What You Must Do Next ]
 
