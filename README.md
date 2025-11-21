@@ -81,7 +81,9 @@ We do not own these domains and understand the critical job we have of disclosin
 **WARNING** 
 HIT OR MISS OPERATION given security of submitted entity.
 
-### It is a scan that succeeds or fails and then pivots to **MYA** where you can submit a Work Request directly. 
+### It is a scan that succeeds or fails and then pivots to **MYA** where you can submit a Work Request directly.
+### Root domain or Subdomain URL entry suggested. ( URI path feature in dev )
+### Examples: http(s):/rainaiinc.com or http(s):example.rainaiinc.com <---- Anything after extension is deemed URI.
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/716acb47-7f3c-439f-a063-d58d95b25f53" />
 
 
