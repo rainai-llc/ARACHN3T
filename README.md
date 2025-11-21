@@ -17,7 +17,7 @@ web application servers and domains GLOBALLY.
 
 ---
 
-### 💡 Project Overview
+### 💡 Project Overview --->
 
 **ARACHN3T** is the open-source component of the SPECTRAL platform, designed to eliminate manual oversight and mitigate risk through advanced, autonomous system analysis. By implementing **Ternary Architecture** and leveraging **Intuitive Assistive AI (IAAI)**, this framework provides security teams with deep, real-time insights into server operations, allowing them to move past alert fatigue and focus on high-value threat intelligence relative to DNS / Javascript / Database currently.
 
