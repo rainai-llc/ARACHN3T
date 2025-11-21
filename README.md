@@ -29,8 +29,8 @@ If a vulnerability is discovered in ethicality for Bug Bounty --> YOU ARE WELCOM
 
 ### This is a user-friendly environment for those wanting to start applying Real-World Cyber Security Practices in the wild. 
 ### This OSS is UNLICENSED and aims to be assistive in your Security Research/Studies and Practices. 
-### If you are looking to just find bugs via entering a prompt, use the "competitions" AI Hacking Agents 
-### (May you receive exactly what you are looking for).
+### If you are looking to just find bugs via entering a prompt, use the "competitions" AI Hacking Agents.
+### (May you receive exactly what you are looking for)
 ### If you are looking to collaborate or acquire shares in ownership, send a request via MYA for potential services.
 ### GRANTED, ANY DUPLICATION AND ATTEMPT TO SALE THIS CODE IN THIS REPOSITORY ANY FORM OR FASHION IS NOT PERMITTED.
 
