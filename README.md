@@ -32,7 +32,7 @@ If a vulnerability is discovered in ethicality for Bug Bounty --> YOU ARE WELCOM
 ### (May you receive exactly what you are looking for)
 ### If you are looking to collaborate or acquire shares in ownership, send a request via MYA for potential services.
 ### This OSS is UNLICENSED and aims to be assistive in your Security Research/Studies and Practices. 
-### GRANTED, ANY DUPLICATION AND ATTEMPT TO SALE CODE IN THIS REPOSITORY ANY FORM OR FASHION IS NOT PERMITTED.
+### GRANTED, ANY DUPLICATION AND ATTEMPT TO SALE CODE IN THIS REPOSITORY IS NOT PERMITTED.
 
 ---
 
