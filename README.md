@@ -71,9 +71,9 @@ You can communicate directly from the application as long as you are connected t
 
 
 ## Database
-Click the Hub in center to Cycle through domains across the web monitored by ARACHN3T!
-We do not own these domains and understand the critical job we have of disclosing anything we find regarding them.
-350K+ Domains in this release alone.
+Click the Hub in center to cycle 350K+ domains across the web monitored by ARACHN3T!
+We do not own these domains and understand the critical job we have of disclosing anything we find regarding them ethically.
+
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/faf98a15-dbfb-4d5b-9137-9edb3ec5f2f1" />
 
 
