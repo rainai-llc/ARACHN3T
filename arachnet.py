@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Scientist: Jeremiah Jackson-Williams
 #
-# Copy Right @Rainai Inc.
+# Copy Right https://githhub.com/Rainai-Inc
 #
 
 import sys
