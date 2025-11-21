@@ -110,7 +110,7 @@ http(s):example.rainaiinc.com <---- Anything after extension is deemed URI.
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0ceec105-46da-401c-887f-615b6c3f411b" />
 
 
-## Re-Classification Confirmed as RCE Status[Tracing]
+## Re-Classified as potential RCE+RXSS / Status [Tracing]
 
 [ #### What You Must Do Next ]
 
