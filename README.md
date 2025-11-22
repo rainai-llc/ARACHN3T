@@ -48,6 +48,30 @@ If a vulnerability is discovered in ethicality for Bug Bounty --> YOU ARE WELCOM
 
 ---
 
+## Mya Chat
+You can communicate directly from the application as long as you are connected to the internet.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3b3607f0-d70e-4c7e-aedd-1c31392b230e" />
+
+
+## Database
+Click the Hub in center to cycle 350K+ domains across the web monitored by ARACHN3T!
+We do not own these domains and understand the critical job we have of disclosing anything we find regarding them ethically.
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/faf98a15-dbfb-4d5b-9137-9edb3ec5f2f1" />
+
+
+## Vector Scan
+**WARNING** 
+HIT OR MISS OPERATION given security of submitted entity.
+
+### It is a scan that succeeds or fails and then pivots to **MYA** where you can submit a Work Request directly.
+### Root domain or Subdomain URL entry suggested. ( URI path feature in dev )
+### Examples: 
+http(s):/rainaiinc.com 
+or 
+http(s):example.rainaiinc.com <---- Anything after extension is deemed URI.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/716acb47-7f3c-439f-a063-d58d95b25f53" />
+
 ### 🚀 Getting Started
 
 To get **ARACHN3T** running and start monitoring your environment, follow these simple steps.
@@ -74,27 +98,3 @@ To get **ARACHN3T** running and start monitoring your environment, follow these 
 * **Node.js (LTS):** Necessary for building and running any web/dashboard components (including future Pro+ visualization integration).
 * **Linux Runtime:** A compatible Linux environment (Ubuntu, Debian, CentOS, or WSL on Windows) is required for full feature functionality and system access.
 * **Modern Browser:** Any modern web browser (Chrome, Firefox, Edge) is needed to interact with the local diagnostic interface.
-
-## Mya Chat
-You can communicate directly from the application as long as you are connected to the internet.
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3b3607f0-d70e-4c7e-aedd-1c31392b230e" />
-
-
-## Database
-Click the Hub in center to cycle 350K+ domains across the web monitored by ARACHN3T!
-We do not own these domains and understand the critical job we have of disclosing anything we find regarding them ethically.
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/faf98a15-dbfb-4d5b-9137-9edb3ec5f2f1" />
-
-
-## Vector Scan
-**WARNING** 
-HIT OR MISS OPERATION given security of submitted entity.
-
-### It is a scan that succeeds or fails and then pivots to **MYA** where you can submit a Work Request directly.
-### Root domain or Subdomain URL entry suggested. ( URI path feature in dev )
-### Examples: 
-http(s):/rainaiinc.com 
-or 
-http(s):example.rainaiinc.com <---- Anything after extension is deemed URI.
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/716acb47-7f3c-439f-a063-d58d95b25f53" />
