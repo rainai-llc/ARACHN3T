@@ -99,5 +99,5 @@ currTrace="""+str(thisTrace))
             pass
     else:
         #Transition to relative path required here. Absolute is primitive for functionality.
-        superUpdate('/media/miah/Distorted/migrate/RainaiInc/Spectral',selfStates0[1])
+        superUpdate(ground.getcwd(),selfStates0[1])
 main()
