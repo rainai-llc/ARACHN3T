@@ -60,7 +60,7 @@ To get **ARACHN3T** running and start monitoring your environment, follow these 
 3. Visit http://localhost:80 in browser of choice.
 
 ## Windows Users
-1. Git Clone https://github.com/Rainai-Inc/ARACHN3T.ntam00
+1. Git Clone [https://github.com/Rainai-Inc/ARACHN3T.ntam00](https://github.com/Rainai-Inc/ARACHN3T.n-tam00)
 2.  ./ARACHN3T_WinExtension.exe
 3. PLEASE RESTART SYSTEM ON YOUR OWN!
 4. Run step (2.) after restart and configure user settings.
