@@ -91,7 +91,7 @@ To get **ARACHN3T** running and start monitoring your environment, follow these 
 5. Git clone https://github.com/Rainai-Inc/ARACHN3T from WSL environment.
 6. chmod +x initialize_start.sh & ./initialize_start.sh
 7. Visit http://localhost:80 in browser of choice.
-### (Database Latency is a given based on the communication between the Hyper-V and native OS. (Will work on that!) )
+(Database Latency is a given based on the communication between the Hyper-V and native OS. Will work on that! )
 
 ## 🚩 Pure Windows Users
 ### Installation extension in dev...
