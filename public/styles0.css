@@ -201,7 +201,7 @@ main p {
 
 /* User Entry Input Container */
 .userEntry {
-    margin: 0;
+    margin: 16px;
     color: lime;
     width: 100%; /* Take full width of parent (position-buttons) */
     display: flex;
@@ -238,22 +238,21 @@ main p {
     padding: 7px;
     background-color: black;
     color: white;
-    border: none;
+    border: groove;
     border-width: 0.3px;
-    border-color: none;
+    border-color: ivory;
     border-radius: 30px;
-    font-size: 1.1rem;
+    font-size: 0.7rem;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 7px;
-    width: 100px;
+    margin: 5px;
+    width: 175px;
 }
 
 .h4ck-btn:hover {
     border: solid;
     border-width: 0.7px;
-    border-color: lime;
-    background-color: grey;
+    color: lime;
 }
 
 /* Responsive Design for Smaller Screens */
