@@ -47,7 +47,7 @@ If a vulnerability is discovered in ethicality for Bug Bounty --> YOU ARE WELCOM
 | ⚙️ | **Runtime Optimization** | Logic for continuous runtime performance optimization, especially beneficial in large-scale network environments. | `Developing` |
 | 🧩 | **Extended URI Analysis** | It captures the idea of connections, references, and structured identifiers that URIs represent. | `Developing` |
 | 🌍 | **Geo-Specific Segmentation** | Location‑based insights of live internet entities by country. | `Developing` |
-| ✨ | **Interactive Intuitive Assistive AI** | Index or confiirm the Integrity or potential dangers of online entities and sources in our current age of AI. | `Developing` |
+| 🧠 | **Interactive Intuitive Assistive AI** | Index or confiirm the Integrity or potential dangers of online entities and sources in our current age of AI. | `Developing` |
 
 ---
 
