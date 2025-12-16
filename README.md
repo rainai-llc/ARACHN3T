@@ -72,7 +72,8 @@ HIT OR MISS OPERATION given security of submitted entity.
 ### Examples: 
 http(s)://rainaiinc.com 
 or 
-http(s)://example.rainaiinc.com <---- Anything after extension is deemed URI.
+http(s)://example.rainaiinc.com <------ Anything after extension,(.com/.net/.gov/.co/etc), is deemed URI. 
+
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/716acb47-7f3c-439f-a063-d58d95b25f53" />
 
 ### 🚀 Getting Started
